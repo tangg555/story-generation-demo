@@ -1,0 +1,9 @@
+rouge
+rouge_score
+transformers
+pytorch_transformers
+pytorch_lightning
+fairseq
+spacy
+scipy
+pandas
