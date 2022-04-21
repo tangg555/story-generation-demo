@@ -1,5 +1,5 @@
 # Story-Generation-Demo
-A simple story generation demo which finetines Huggingface pretrained model to generate stories.
+A simple story generation demo which finetines Huggingface pretrained model BART to generate stories.
 
 ## Instructions
 This project is based on [pytorch-lightning](https://www.pytorchlightning.ai/) framework, and the pretrained model [BART](https://aclanthology.org/2020.acl-main.703.pdf) is downloaded from [Hugginface: bart-base](https://huggingface.co/facebook/bart-base).
@@ -18,12 +18,12 @@ python -r requirements.txt
 ```
 
 #### 2. Collect Datasets and Resources
-`datasets` and `resources` are separate from the code, since they are too large. Both of them are offered in ...
+`datasets` and `resources` are separate from the code, since they are too large. Both of them can be downloaded from [BaiduNetDisk](). Put them to the basedir after downloaded.
 #####2.1 Datasets
 The structure of `datasets`should be like this:
 ```markdown
 ├── datasets
-   └── story-generation		# expeirmtn group name
+   └── story-generation		# expeirment group name
        ├── `roc`        # ROCStories
               └── `train.source.txt`    # leading context of stories
               └── `train.target.txt`       # story corresponding to the leading context
@@ -53,7 +53,7 @@ The structure of resources should be like this:
               └── `pytorch_model.bin`       
               └── ...
 ```
-`bart-base` can be downloaded from [here](https://huggingface.co/facebook/bart-base)
+The huggingface pretrained model `bart-base` can be downloaded from [here](https://huggingface.co/facebook/bart-base)
 
 #### 3. Fine-tuning BART on ROCStories
 I have set all essential parameters, so you can directly run 
@@ -93,3 +93,18 @@ python tasks/story-generation/test.py --data_dir=datasets/story-generation/roc-s
   --model_name leading-bart \
   --experiment_name=leading-bart-roc-stories
 ```
+
+## Notation
+Some notes for this project.
+#### 1 - Complete Prject Structure
+```markdown
+├── datasets 
+├── output  # this will be automatically created to put all the output stuff including checkpoints and generated text
+├── resources # put some resources used by the model e.g. the pretrained model.
+├── tasks # excute programs e.g. training, tesing, generating stories
+├── .gitignore # used by git
+├── requirement.txt # the checklist of essential python packages 
+```
+#### 2 - Scripts for Downloading huggingface models
+I wrote two scripts to download models from huggingface website.
+One is `tasks/download_hf_models.sh`, and another is `src/utils/huggingface_helper.py`

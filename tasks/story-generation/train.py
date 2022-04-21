@@ -4,8 +4,6 @@
 - logger and WandLogger
 Weights and Biases is a third-party logger
 https://pytorch-lightning.readthedocs.io/en/latest/common/loggers.html
-- auto_lr_find 使用
-
 @Notes:
 
 """

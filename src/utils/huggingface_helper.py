@@ -20,4 +20,4 @@ def download_repository(repository_id: str = "lysandre/arxiv-nlp",
 
 
 if __name__ == '__main__':
-    download_repository(repository_id="gpt2")
+    download_repository(repository_id="bart-base")
