@@ -44,7 +44,7 @@ def set_basic_args_for_pl_trainer(parser: argparse.ArgumentParser = None, output
     # Force training for at least these many epochs
     parser.set_defaults(min_epochs=2)
     # no accumulation for epochs 1-4. accumulate 3 for epochs 5-10. accumulate 20 after that
-    parser.set_defaults(accumulate_grad_batches={5: 2, 10: 5})
+    parser.set_defaults(accumulate_grad_batches=1)
     # Automatically tries to find the largest batch size that fits into memory, before any training.
     # Trainer(auto_scale_batch_size="binsearch") run batch size scaling, result overrides hparams.batch_size
     parser.set_defaults(auto_scale_batch_size=None)

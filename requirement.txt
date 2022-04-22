@@ -1,8 +1,8 @@
 rouge
 rouge_score
-transformers
-pytorch_transformers
-pytorch_lightning
+transformers==4.21.0
+pytorch_lightning==1.6.0
+pytorch==1.11.0
 fairseq
 spacy
 scipy

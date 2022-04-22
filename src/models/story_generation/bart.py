@@ -187,7 +187,7 @@ class LeadingContextBart(BaseTransformer):
                 use_cache=True,
                 decoder_start_token_id=self.decoder_start_token_id,
                 num_beams=self.eval_beams,
-                max_length=self.eval_max_length,
+                max_length=self.hparams.max_target_length,
             )
         else:
             generated_ids = self.sample_sequence(batch, use_top_p=self.use_top_p, top_p=self.top_p)
