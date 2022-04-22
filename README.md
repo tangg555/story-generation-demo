@@ -18,11 +18,7 @@ python -r requirements.txt
 ```
 
 #### 2. Collect Datasets and Resources
-`datasets` and `resources` are separate from the code, since they are too large. Both of them can be downloaded from [BaiduNetDisk](https://pan.baidu.com/s/1gLxOZI0t65l4a6cTns8U2w) (input code: gb1a). Put them to the basedir after downloaded.
-
-Chinese:
-链接: https://pan.baidu.com/s/1gLxOZI0t65l4a6cTns8U2w 提取码: gb1a 
---来自百度网盘超级会员v8的分享
+`datasets` and `resources` are separate from the code, since they are too large. Both of them can be downloaded from [BaiduNetDisk](https://pan.baidu.com/s/1gLxOZI0t65l4a6cTns8U2w) (input code: gb1a) or [Dropbox](https://www.dropbox.com/s/p9a4lz0eqax55it/datasets_and_resources.zip?dl=0). Put them to the basedir after downloaded.
 #####2.1 Datasets
 The structure of `datasets`should be like this:
 ```markdown
