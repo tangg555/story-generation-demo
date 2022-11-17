@@ -14,7 +14,7 @@ So if you want to run this code, you must have following preliminaries:
 
 #### 1. Install packages
 ```shell
-python -r requirements.txt
+pip install -r requirements.txt
 ```
 
 #### 2. Collect Datasets and Resources
